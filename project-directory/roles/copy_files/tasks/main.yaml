@@ -1,0 +1,18 @@
+# roles/copy_files/tasks/main.yml
+---
+- name: Copy the python file to the managed node
+  copy:
+    src: "{{ copy_files_src }}/simple_python_app"
+    dest: "{{ copy_files_dest }}"
+    owner: "{{ copy_files_owner }}"
+    group: "{{ copy_files_group }}"
+    mode: '0644'
+
+- name: Copy the java file to the managed node
+  copy:
+    src: "{{ copy_files_src }}/simple-java-app"
+    dest: "{{ copy_files_dest }}"
+    owner: "{{ copy_files_owner }}"
+    group: "{{ copy_files_group }}"
+    mode: '0644'
+
