@@ -1,0 +1,21 @@
+# copy_file.yml
+---
+- name: Copy file from control node to managed node
+  hosts: managed_nodes
+  tasks:
+    - name: Copy the python file to the managed node
+      copy:
+        src: /home/arshad/simple_python_app
+        dest: /home/user1
+        owner: user1
+        group: user1
+        mode: '0644'
+
+    - name: Copy the java file to the managed node
+      copy:
+        src: /home/arshad/simple-java-app
+        dest: /home/user1
+        owner: user1
+        group: user1
+        mode: '0644'
+
