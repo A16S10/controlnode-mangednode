@@ -1,0 +1,8 @@
+# group_vars/managed_nodes.yml
+---
+copy_files_src: /home/arshad
+copy_files_dest: /home/user1
+copy_files_owner: user1
+copy_files_group: user1
+ansible_become_password: "{{ vault_become_password }}"
+

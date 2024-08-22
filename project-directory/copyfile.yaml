@@ -1,0 +1,7 @@
+# copy_file.yml
+---
+- name: Copy files to managed nodes
+  hosts: managed_nodes
+  roles:
+    - copy_files
+
