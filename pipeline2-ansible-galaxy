@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Deploy Files') {
+            steps {
+                ansiblePlaybook(
+                    playbook: '/var/lib/jenkins/workspace/ansible-galaxy/project-directory/copyfile.yaml',
+                    inventory: '/var/lib/jenkins/workspace/ansible-galaxy/project-directory/inventory/hosts',
+                    credentialsId: 'newjenkins'
+                )
+            }
+        }
+    }
+}
