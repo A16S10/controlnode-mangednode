@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Deploy Files') {
+            steps {
+                ansiblePlaybook(
+                    playbook: '/var/lib/jenkins/workspace/assignmet-ansible-pipeline/copyfile.yaml',
+                    inventory: '/var/lib/jenkins/workspace/assignmet-ansible-pipeline/inventory.ini',
+                    credentialsId: 'newjenkins'
+                )
+            }
+        }
+    }
+}
