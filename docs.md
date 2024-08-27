@@ -2,7 +2,8 @@
 
 Ansible is a powerful open-source automation tool used for server configuration management. To begin, ensure you have a managed node where files will be transferred. This can be achieved by creating an additional server using AWS EC2 instances, VirtualBox, or any other virtualization platform.
 
-![Alt text](path/to/image.png "Optional title")
+![Alt text](images/ansible.jpg)
+
 ## Step A: Establish SSH Connection Between Control Node and Managed Node
 
 ### 1. Install SSH
@@ -97,12 +98,19 @@ In Jenkins, create a new job using the Pipeline methodology. Provide a meaningfu
 
 In the Pipeline section of the job configuration, set the definition to "Pipeline script" and enter your pipeline code to automate the Ansible tasks.
 
+![Alt text](images/pipeline.jpg)
+
 ### 3. Save and Execute the Job
 
 Save the job configuration and trigger the build. Jenkins will execute the pipeline script, running the Ansible playbook to copy files from the control node to the managed node.
+
+
 
 ### 4. Verify the File Transfer
 
 After the Jenkins job completes, check the managed node to ensure that the files have been transferred successfully.
 
 By following these steps, you can set up secure SSH connections between your control and managed nodes, write efficient Ansible playbooks and inventory files, and automate file transfers using Jenkins pipelines.
+
+
+
